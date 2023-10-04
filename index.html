@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
+    integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Vendr</title>
+</head>
+
+<body>
+  <!-- SECTION -->
+  <header>
+    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+      <a class="navbar-brand ms-3" href="#">
+        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
+          loading="lazy">
+        <span class="ms-2">Vendr</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <!-- NAVLINKS -->
+          <a href="#/about" class="nav-link">About</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION -->
+  <main id="router-view">
+    <!-- PRIMARY VIEWPORT -->
+    <div class="container-fluid bg-black mt-5">
+      <section class="row">
+        <div class="col-6">
+          <p class="fw-bold fs-1 m-3 text-white">Vendr</p>
+        </div>
+        <div class="col-6 d-flex justify-content-end align-items-center">
+          <p onclick="app.MoneyController.addMoney()" class="fw-bold text-white fs-1 btn btn m-0" role="button">Add
+            .25</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="container-fluid">
+      <section id="drawItems" class="row justify-content-evenly">
+
+        <!-- <div class="col-3 mt-3">
+          <img class="img-items"
+            src="https://images.unsplash.com/photo-1576749872435-ff88a71c1ae2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Brussels Sprouts">
+          <div class="bg-black text-white fw-bold p-1">
+            <p>Brussels Sprout</p>
+            <div class="d-flex justify-content-between">
+              <p>$4.25</p>
+              <p class="btn btn-success fw-bold">BUY</p>
+            </div>
+          </div>
+        </div> -->
+        <!-- 
+        <div class="col-3 mt-3">
+          <img class="img-items"
+            src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+            alt="Milk">
+          <div class="bg-black text-white fw-bold p-1">
+            <p>Milk</p>
+            <div class="d-flex justify-content-between">
+              <p>$2.25</p>
+              <p class="btn btn-success fw-bold">BUY</p>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="col-3 mt-3">
+          <img class="img-items"
+            src="https://images.unsplash.com/photo-1529042410759-befb1204b468?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1972&q=80"
+            alt="Meat Balls">
+          <div class="bg-black text-white fw-bold p-1">
+            <p>Meat Balls</p>
+            <div class="d-flex justify-content-between">
+              <p>$6.25</p>
+              <p class="btn btn-success fw-bold">BUY</p>
+            </div>
+          </div>
+        </div> -->
+
+      </section>
+    </div>
+
+    <div class="container-fluid">
+      <section class="row justify-content-end mt-5">
+        <div class="col-4 fw-bold bg-black text-white fs-1 d-flex justify-content-between">
+          <p>TOTAL MONEY:</p>
+          <p>$<span id="moneyCount">0.00</span></p>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- SECTION -->
+  <footer class="bg-dark text-light">
+    <div class="text-center no-select">
+      <p class="mb-0"><small>Made with 💖 by CodeWorks</small></p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/App.js" type="module"></script>
+
+</body>
+
+</html>

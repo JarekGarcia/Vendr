@@ -1,0 +1,6 @@
+/* BASIC STYLES HERE */
+.img-items {
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+}
